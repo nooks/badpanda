@@ -1,3 +1,8 @@
+<p align="center">
+  <a href="#">
+    <img height="96" width="96" src="https://raw.githubusercontent.com/nooks/badpanda/gh-pages/images/panda.png">
+  </a>
+</p>
 Bad Panda
 ========
 
