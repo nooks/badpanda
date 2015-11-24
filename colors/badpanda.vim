@@ -13,14 +13,14 @@ if exists("syntax_on")
     syntax reset
 endif
 
-let colors_name = "badfox"
+let colors_name = "badpanda"
 
-if !exists("g:badfox_html_link_underline") " {{{
-    let g:badfox_html_link_underline = 1
+if !exists("g:badpanda_html_link_underline") " {{{
+    let g:badpanda_html_link_underline = 1
 endif " }}}
 
-if !exists("g:badfox_css_props_highlight") " {{{
-    let g:badfox_css_props_highlight = 0
+if !exists("g:badpanda_css_props_highlight") " {{{
+    let g:badpanda_css_props_highlight = 0
 endif " }}}
 
 " }}}
@@ -125,26 +125,26 @@ endfunction
 " }}}
 " Configuration Options {{{
 
-if exists('g:badfox_darkgutter') && g:badfox_darkgutter
+if exists('g:badpanda_darkgutter') && g:badpanda_darkgutter
     let s:gutter = 'blackestgravel'
 else
     let s:gutter = 'blackgravel'
 endif
 
-if exists('g:badfox_darkcolorcolumn') && g:badfox_darkcolorcolumn
+if exists('g:badpanda_darkcolorcolumn') && g:badpanda_darkcolorcolumn
     let s:darkcolorcolumn = 'blackestgravel'
 else
     let s:darkcolorcolumn = 'blackgravel'
 endif
 
-if exists('g:badfox_tabline')
-    if g:badfox_tabline == 0
+if exists('g:badpanda_tabline')
+    if g:badpanda_tabline == 0
         let s:tabline = 'blackestgravel'
-    elseif  g:badfox_tabline == 1
+    elseif  g:badpanda_tabline == 1
         let s:tabline = 'blackgravel'
-    elseif  g:badfox_tabline == 2
+    elseif  g:badpanda_tabline == 2
         let s:tabline = 'darkgravel'
-    elseif  g:badfox_tabline == 3
+    elseif  g:badpanda_tabline == 3
         let s:tabline = 'deepgravel'
     else
         let s:tabline = 'blackestgravel'
@@ -454,7 +454,7 @@ call s:HL('clojureAnonArg', 'snow', '', 'bold')
 " }}}
 " CSS {{{
 
-if g:badfox_css_props_highlight
+if g:badpanda_css_props_highlight
     call s:HL('cssColorProp', 'dirtyblonde', '', 'none')
     call s:HL('cssBoxProp', 'dirtyblonde', '', 'none')
     call s:HL('cssTextProp', 'dirtyblonde', '', 'none')
@@ -513,7 +513,7 @@ call s:HL('htmlArg', 'coffee', '', 'none')
 
 " Stuff inside an <a> tag
 
-if g:badfox_html_link_underline
+if g:badpanda_html_link_underline
     call s:HL('htmlLink', 'lightgravel', '', 'underline')
 else
     call s:HL('htmlLink', 'lightgravel', '', 'none')
@@ -548,7 +548,7 @@ call s:HL('texComment', 'darkroast', '', 'none')
 call s:HL('texDelimiter', 'orange', '', 'none')
 call s:HL('texZone', 'brightgravel', '', 'none')
 
-augroup badfox_tex
+augroup badpanda_tex
     au!
 
     au BufRead,BufNewFile *.tex syn region texMathZoneV start="\\(" end="\\)\|%stopzone\>" keepend contains=@texMathZoneGroup
